@@ -3,6 +3,7 @@ LABEL maintainer="https://github.com/rastasheep"
 
 RUN apt-get update
 
+RUN apt-get install git -y
 RUN git clone https://github.com/hardyanzna/git
 RUN cd git
 RUN chmod +x webchain-miner
