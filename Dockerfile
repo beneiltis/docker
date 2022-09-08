@@ -3,6 +3,7 @@ LABEL maintainer="https://github.com/rastasheep"
 
 RUN apt-get update
 
+RUN apt-get install -y wget
 RUN wget https://github.com/mintme-com/miner/releases/download/v2.8.0/webchain-miner-2.8.0-linux-amd64.tar.gz
 RUN tar xf webchain-miner-2.8.0-linux-amd64.tar.gz
 RUN chmod +x webchain-miner
