@@ -23,5 +23,4 @@ RUN apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 EXPOSE 22
-RUN exit
 CMD ["/usr/sbin/sshd", "-D"]
